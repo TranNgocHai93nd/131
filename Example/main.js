@@ -174,5 +174,5 @@ function add(){
 }
  btn_Add.addEventListener('click',add)
 
-console.log(ul);
+
 
