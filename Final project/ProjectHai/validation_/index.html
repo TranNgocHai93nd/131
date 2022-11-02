@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final project</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="margin:0px;">
+    <div class="container">
+        <div class="heading">
+            <div class="heading-logo">
+                <img src="https://neulionms-a.akamaihd.net/espn/v3/espnplayer/site_4/images/menulogo.png"
+                 alt="logo_espn" >
+            </div>
+            <div class="heading-nav">
+                <ul class="heading-nav_items">
+                    <li class="heading-nav_items1">SUBCRIPTION
+                        <img src="https://www.espnplayer.com/espnplayer/reg_1/images/purchase_ic_check.png" alt=""
+                        width="5px" height="5px" class="tick">
+                    </li>
+                    <li class="heading-nav_items1">ACCOUNT</li>
+                    <li class="heading-nav_items1">PAYMENT</li>
+                    <li class="heading-nav_items1">CONFIRMATION</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-head">Create Account</div>
+            <form action="" method="POST" class="form" name="myForm" id="register-form" >
+                <!-- section 1 -->
+                <div class="form-group">
+                    <div class="main_name1">
+                        <label for="FirstName">First Name</label>
+                        <input id="FirstName" name="FirstName" rules="required" type="text" placeholder="FirstName">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="main_name2">
+                        <label for="LastName">Last Name</label>
+                        <input id="LastName" name="LastName" rules="required" type="text" placeholder="LastName">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <!-- section 2 -->
+                <div class="form-group">
+                    <div class="main_name1">
+                        <label for="country">Country Viewing From</label>
+                        <select name="country" id="country" rules="required" placeholder="hi">
+                            <option value=""></option>
+                            <option value="Vietnam">VietNam</option>
+                            <option value="England">England</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Germany">Japan</option>
+                        </select>
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="main_name2"></div>
+                </div>
+                <!-- section 3 -->
+                <div class="form-group">
+                    <div class="main_name1">
+                        <label for="User Name">User Name</label>
+                        <input id="User Name" name="User Name" rules="required" type="text" placeholder="User Name" >
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="main-button">
+                        <button class="form-submit" type="submit" id="check" >Check</button>
+                    </div>
+                </div>
+                <!-- section 4 -->
+                <div class="form-group">
+                    <div class="main_name1">
+                        <label for="Email">Email Address</label>
+                        <input id="Email" name="Email" rules="required|email" type="text" placeholder="Email Address">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="main_name2">
+                        <label for="confirmEmail">Confirm Address Email</label>
+                        <input id="confirmEmail" name="confirmEmail" rules="required|confirmEmail" type="text" placeholder="Confirm Address Email">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <!-- section 5 -->
+                <div class="form-group">
+                    <div class="main_name1">
+                        <label for="password">Confirm Password</label>
+                        <input id="password" name="password"  rules="required|min:6" type="password" placeholder="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="main_name2">
+                        <label for="Confirm Password">Confirm Password</label>
+                        <input id="Confirm Password" name="Confirm Password"  rules="required|confirmPass" type="password" placeholder="Confirm Password">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+            </form>
+            <!-- section 6-->
+            <div class="main-option">
+                <div class="main-option-check1">
+                    <input id="checkbox1" class="checkbox" type="checkbox">
+                    <label for="checkbox1" class="checkbox_label">Yes! Send me email special offers and updates about ESPN Player and other produces and services of The Walt Disney Family of Companies </label>
+                </div>
+                <div class="main-option-check1">
+                    <input id="checkbox1" class="checkbox" type="checkbox">
+                    <label for="checkbox1" class="checkbox_label">I have read the 
+                    <a href="#"><span>Terms of User</span></a> 
+                    </label>
+                </div>
+                <div>
+                    <p>
+                        By creating an account | confirm | have read 
+                        <a href="#"><span>DisNey's Privacy Policy</span></a>
+                        & <a href="#"><span>Cookies Policy.</span></a>
+                        understand that the provider of this services is ESPN Sports Media Ltd.
+                        <a href="#"><span>More.</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="footer-items">
+                <a href="#"><li class="footer-content">PRIVACY POLICY</li></a>
+                <a href="#"><li class="footer-content">TERMS OF USE</li></a>
+                <a href="#"><li class="footer-content">HELP</li></a>
+                <a href="#"><li class="footer-content">Manage Privacy Preferences</li></a>
+            </ul>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+         Validator ('#register-form');
+    </script>
+</body>
+</html>

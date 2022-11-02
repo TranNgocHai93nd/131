@@ -1,0 +1,84 @@
+.body{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid black;
+    border-radius: 10px;
+    width:100px;
+    height:150px;
+    margin:0px;
+}
+.form{
+        width: 260px;
+        height: 370px;
+        margin: 60px 370px;
+        color: black;
+        border: solid 2px #f27474;
+        border-radius: 10px;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: #d38ae5; */
+}
+.heading{
+    font-size: 14px;
+    font-weight: bold;
+    height: 10px;
+}
+.desc{
+    font-size: 10px;
+    margin: 0px;
+    padding-top: 10px;
+}
+.spacer{
+    height: 10px;
+}
+.form-group{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.form-label{
+    font-size: 10px;
+    font-weight: bold;
+}
+.form-control{
+    width: 180px;
+    height: 22px;
+    font-size: 10px;
+    color: rgb(202 132 132);
+    border: 1px solid #57e26a;
+    border-radius: 3px;
+    outline:none;
+}
+.form-message{
+    color: #e90d3a;
+    font-style: italic;
+    font-size: 10px;
+    font-weight: bold;
+}
+.form-submit{
+    background-color: #adade1;
+    color: #fff;
+    border-radius: 10px;
+    width: 93px;
+    height: 27px;
+    margin-bottom: 27px;
+    font-size: 12px;
+    border: 1px red solid;
+}
+.form-control:hover{
+    border-color: red;
+}
+.form-label:hover{
+    color:red;
+}
+.form-submit:hover{
+    background-color: red;
+    font-weight: bold;
+}
+
+

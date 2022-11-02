@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./forgetpass.css">
+</head>
+<body>
+    <div class="sign-container">
+        <div class="layoutSign">
+            <div class="sign-heading">
+                <img src="https://neulionms-a.akamaihd.net/espn/v3/espnplayer/site_4/images/signin_logo.svg" 
+                alt="logoEspn">
+            </div>
+            <div class="sign-main">
+                <div class="sign-title">
+                    <span>FORGOT PASSWORD</span>
+                    <div class="sign-empty"></div>
+                </div>
+                <form action="/action_page.php" class="sign-form-group">
+                    <div class="form-items">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" >
+                        <span class="message-error"></span>
+                    </div>
+                    <button type="reset" class="reset">RESET PASSWORD</button>
+                    <button type="text" id="forget-cancel">CANCEL</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+body{
+    padding:0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+.sign-container{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+.sign-title{
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+/* .sign-empty{
+    height: 20px;
+} */
+.layoutSign{
+    width: 31%;
+    height: 588px;
+    border: solid 1px black;
+    margin-top: 34px;
+    background-color: #fff;
+}
+.sign-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 445px;
+    margin: 0px 45px;
+    background-color: #fff;
+}
+.sign-form-group{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+.sign-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1b1b;
+    width: 100%;
+    height: 96px;
+}
+
+.form-items{
+    display: flex;
+    flex-direction: column;
+    height: 108px;
+    justify-content: space-between;
+}
+.message-error{
+    color: red;
+    font-size: 25px;
+    font-style: italic;
+}
+.sign-remember{
+    font-size: 15px;
+
+}
+#username{
+    font-size: 30px;
+    height: 49px;
+    border: 1px solid rgb(226, 218, 218);
+    width: 100%;
+    border-radius: 14px;
+}
+#password{
+    font-size: 30px;
+    height: 65px;
+    border: 1px solid rgb(226, 218, 218);
+    width: 100%;
+    border-radius: 14px;
+}
+.reset{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 55px;
+    border: none;
+    font-size: 19px;
+    width: 100%;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+.Sign-note{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+}
+.sign-checkbox{
+    width: 20px;
+    height: 20px;
+}
+.sign-forget{ 
+    font-size: 15px;
+}
+.sign-remember{
+    font-size: 20px;
+}
+.sign-forget{
+    font-size: 20px;
+}
+.sign-footer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    flex-direction: column;
+    border-top: rgb(226, 218, 218) 1px solid;
+    line-height: 30px;
+    background-color: #fff;
+}
+input[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 5px
+}
+a{
+    text-decoration: none;
+}
+.sign-forget:hover{
+    text-decoration:underline;
+}
+img {
+    width: 312px;
+    height: 35px;
+}
+#forget-cancel{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    border-radius: 55px;
+    border: 1px solid rgb(226, 218, 218);
+    font-size: 22px;
+    width: 100%;
+    padding: 14px 0px;
+    cursor: pointer;
+}
+label{
+    font-size: 21px;
+    font-weight: bolder;
+}
+.reset:hover {
+   background-color: #d90909f5;
+}

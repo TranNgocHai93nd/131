@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 200px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid var(--color-background);
+            border-radius: 50%;
+            position: relative;
+            background-color: var(--color-background);
+            display: flex;
+            align-items: center;
+        }
+        .box1{
+            height:10px;
+            width:250px;
+            border: 0.5px solid var(--color-background);
+            background-color: var(--color-background);
+        }
+        .rec{
+            height:100%;
+            width: 0px;
+            
+        }
+        .box2{
+            
+            border-radius: 50%;
+            font-size: 50px;
+            position: absolute;
+            top:var(--margin_circle);
+            left:var(--margin_circle);
+            right:var(--margin_circle);
+            bottom: var(--margin_circle);
+            border: 1px solid var(--color-background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        
+        :root{
+             --margin_circle : 15px;
+             --color-background: rgb(185 163 163 / 15%);
+        }
+        .box.active{
+            background-color: aqua;
+            transition: all 6s ease;
+        }
+        .rec.active1{
+            width: 100%;
+            background-color: aqua;
+            transition: all 1.5s ease;
+        }
+        .default{
+            width: 100px;
+            height: 100px;
+            border: 1px solid var(--color-background);
+            border-radius: 50%;
+            position: relative;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+        }
+        .default1{
+            border-radius: 50%;
+            font-size: 50px;
+            position: absolute;
+            top:var(--margin_circle);
+            left:var(--margin_circle);
+            right:var(--margin_circle);
+            bottom: var(--margin_circle);
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+       
+        
+        button{
+            width:250px;
+            height: 80px;
+            margin-top: 20px;
+            font-size: 40px;
+            border-radius: 10px;
+            background-color: blueviolet;
+            color: #fff;
+            cursor: pointer;
+
+        }
+        .buttonSelect{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+        }
+        .btn.hidden{
+            background-color: beige;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="default">
+            <div class="default1">1</div>
+        </div>
+        <div class="box1">
+            <div class="rec"></div>
+        </div>
+        <div class="box">
+            <div class="box2">2</div>
+        </div>
+        <div class="box1">
+            <div class="rec"></div>
+        </div>
+        <div class="box">
+            <div class="box2">3</div>
+        </div>
+        <div class="box1">
+            <div class="rec"></div>
+        </div>
+        <div class="box">
+            <div class="box2">4</div>
+        </div>
+    </div>
+    <div class="buttonSelect">
+        <button class="btn">Next</button>
+        <button class="pre">Previous</button>
+    </div>
+    
+
+    <script>
+        const circles = document.querySelectorAll('.box');
+        const btn = document.querySelector('.btn');
+        const recs = document.querySelectorAll('.rec');
+        const pre = document.querySelector('.pre');
+        btn.onclick = myFunction;
+        pre.onclick = myFunction1;
+        let click = -1;
+        let arr = [];
+       console.log(circles);
+        function myFunction () {
+            click++ ;
+            if(click >= circles.length ) {
+                click = circles.length;
+                btn.classList.add('hidden')
+                btn.disabled = true ;
+            }
+            circles[click].classList.add('active');
+            recs[click].classList.add('active1')
+            arr = document.querySelectorAll('.box.active')
+            
+        }
+        console.log(click);
+
+        let clickG = circles.length;
+        
+        function myFunction1 () {
+            clickG-=1;
+            
+            circles[ clickG].classList.remove('active');
+            recs[clickG].classList.remove('active1')
+            // excuting();
+        }
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+<!-- function excuting() {
+    circles.forEach((circle, idx) => {
+    if(idx <  click) {
+        circle.classList.add('active')
+        } else {
+        circle.classList.remove('active')
+        }
+    })
+    recs.forEach((rec, idx) => {
+    if(idx <  click) {
+        rec.classList.add('active1')
+        } else {
+        rec.classList.remove('active1')
+        }
+    })
+} -->

@@ -1,0 +1,94 @@
+.body{
+    width:100%;
+    background-color: #fff;
+}
+.logo{
+    width:100%;
+    height: 60px;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.logoW3c{
+    width: 50px;
+    height: 80px;
+    
+}
+h2{
+    font-size: 50px;
+    color:red
+}
+.login{
+    margin:10px 5px;
+    padding:0.7rem 1rem;
+    border-radius: 20px;
+    color: #fff;
+    background-color: forestgreen;
+    position: relative;
+    top: 22px;
+    right: 15px;
+    text-decoration: none;
+    
+
+
+}
+.home{
+    
+    /* z-index: 2px; */
+  
+    
+    align-items: center;
+    padding-left:20px;
+
+}
+.head-nav{
+    background-color: black;
+    max-height: 200px;
+    width:100%;
+    position:fixed;
+    display:flex;
+    flex:1;
+    /* z-index: 1px; */
+    align-items: center;
+
+}
+.head-items{
+    color: #fff;
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+    flex:6;
+}
+.icon-items{
+    display:flex;
+    justify-content:space-around center ;
+    flex:1;
+
+}
+.icon1{
+    flex:1;
+    order:1;
+    margin-top:4px;
+}
+.icon2{
+    margin-top:10px;
+    flex:1;
+    order:3;
+}
+.icon3{
+    flex:1;
+    margin-top:9px;
+    order:2;
+}
+li:hover{
+    background-color: cadetblue;
+    background-clip:border-box;
+    color: red;
+}
+li::selection{
+    color: red;
+}
+li{
+    background-clip:border-box;
+
+}
