@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        column-gap: 5px;
+      }
+      .content1 {
+        flex: 1;
+      }
+      .img-main {
+        flex: 4;
+      }
+      .desc-product {
+        flex: 3;
+      }
+      ul.list-img_small li {
+        list-style: none;
+      }
+
+      ul.list-img_small li img {
+        width: 100px;
+        height: 100px;
+      }
+      img {
+        width: 100px;
+        height: 200px;
+      }
+
+      .img-main img {
+        width: 97%;
+        height: 83%;
+        margin-top: 5px;
+        object-fit: cover;
+      }
+      h1 {
+        font-size: 18px;
+        margin: 5px 0px;
+      }
+      h2 {
+        margin: 5px 0px;
+        font-size: 18px;
+        text-decoration: underline;
+        text-decoration-color: red;
+      }
+      h3 {
+        font-size: 13px;
+        margin: 0px;
+      }
+      h4 {
+        margin: 0px;
+      }
+      div.size-closed li {
+        width: 33px;
+        height: 21px;
+        font-size: 12px;
+        /* list-style: none; */
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div.size-closed ul {
+        display: flex;
+        column-gap: 5px;
+        display: flex;
+        column-gap: 5px;
+        padding-left: 0px;
+      }
+      div.content-decs ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+      }
+      div.content-decs ul li {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: flex;
+        justify-content: flex-start;
+        /* padding-left: 0px; */
+      }
+      .img-main_content {
+        width: 100%;
+        height: 500px;
+        position: relative;
+      }
+      .img-main_content img {
+        width: 100%;
+        height: 480px;
+        object-fit:fill;
+      }
+      ul.quality {
+        list-style-type: circle;
+      }
+      .select_quantity {
+        display: flex;
+      }
+      .render_quantity {
+        width: 46px;
+        border: 1px black solid;
+        text-align: center;
+      }
+      .chooseSize a {
+        background-color: red;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px;
+        font-size: 12px;
+      }
+      .chooseSize {
+        margin: 12px 0px;
+      }
+      ul {
+        margin-top: 5px;
+      }
+
+      .img-zoom-lens {
+        position: absolute;
+        border: 1px solid #e03636;
+        /*set the size of the lens:*/
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+      .img-zoom-result {
+        border: 1px solid #d4d4d4;
+        /*set the size of the result div:*/
+        width: 300px;
+        height: 300px;
+        transform: translate(700px,-460px);
+        border-radius: 50%;
+      }
+     
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content1">
+        <ul class="list-img_small">
+          <li>
+            <a href="#"
+              ><img
+                src="https://product.hstatic.net/200000201725/product/z3836530961857_0842a34a2e5347dad0e7c7cfecb756be_704c7f5cf1bb400eba87a65f920420ce_master.jpg"
+                alt=""
+                id="1"
+                onClick="handleChangeimg(event)"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://product.hstatic.net/200000201725/product/z3836530974555_92211380889152ef829f48ae2458f02d_a305c63dee0c4a89b08e4c633bc37b0f_master.jpg"
+                alt=""
+                id="2"
+                onClick="handleChangeimg(event)"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://product.hstatic.net/200000201725/product/z3836530881970_13259e6f86d450c9f977889a8e0ef69a_0b39737cbfaa40ddb32c989a9ca94f53_master.jpg"
+                alt=""
+                id="3"
+                onClick="handleChangeimg (event)"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="https://product.hstatic.net/200000201725/product/z3836531128506_c8ad00c581039d0d8b460924d3688f4f_0af13a4b72a246d09c42546369ebcda9_master.jpg"
+                alt=""
+                id="4"
+                onClick="handleChangeimg (event)"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="img-main">
+        <div class="img-main_content" onmouseleave="ResultHidde()" onmouseenter = "RenderResult()">
+          <img
+            src="https://product.hstatic.net/200000201725/product/z3836530961857_0842a34a2e5347dad0e7c7cfecb756be_704c7f5cf1bb400eba87a65f920420ce_master.jpg"
+            alt=""
+            id="myimage"
+            
+            
+          />
+          <div id="myresult" class="img-zoom-result"></div>
+        </div>
+      </div>
+      <div class="desc-product">
+        <h1 class="name-closed">
+          Áo Nỉ Da Cá ColorBlock Simwood 1605
+          <p>hi you</p>
+          
+
+
+          Áo Nỉ Da Cá ColorBlock Simwood 1605
+        </h1>
+        <h4 class="series-closed">SKU: AN2-A1605BcM</h4>
+        <div class="size-closed">
+          <ul>
+            <li>M</li>
+            <li>L</li>
+            <li>XL</li>
+            <li>XXL</li>
+          </ul>
+          <div class="chooseSize">
+            <a href="#">HƯỚNG DẪN CHỌN SIZE</a>
+          </div>
+          <div class="select_quantity">
+            <button>+</button>
+            <div class="render_quantity">1</div>
+            <button>-</button>
+          </div>
+          <div class="content-decs">
+            <h2>Mô tả</h2>
+            <h3>ÁO Nỉ Da Cá ColorBlock Simwood 1605</h3>
+            <h3>Kiểu dáng</h3>
+            <ul>
+              <li>Slim fit</li>
+              <li>
+                Phom áo ôm vừa vặn, trẻ trung, mặc rất thoải mái. Diện đơn hoặc
+                mặc đôi đều phù hợp
+              </li>
+            </ul>
+            <h3>CHẤT LIỆU: Nỉ da cá ( 35% cotton & 65% polyester)</h3>
+            <ul class="quality">
+              <li>Là chất liệu dày dặn có 2 mặt.</li>
+              <li>
+                Mặt bên ngoài mềm mịn, được bao phủ bởi một lớp lông ngắn làm
+                tăng khả năng giữ ấm, cân bằng nhiệt và chắn gió cực tốt.
+              </li>
+              <li>
+                Mặt trong dệt kim với các sợi vải móc chồng lên nhau hình vảy cá
+                tạo hiệu ứng bắt mắt, bề mặt có nhiều lỗ thoáng khí, luôn tạo
+                cảm giác thông thoáng, mặc ấm mà không bị hầm nóng hay khó chịu.
+              </li>
+              <li>
+                Vải có độ co giãn tốt mang đến cảm giác thoải mái, dễ chịu.
+              </li>
+            </ul>
+            <h3>ĐẶC ĐIỂM NỔI BẬT</h3>
+            <ul>
+              <li>
+                Sự kết hợp độc đáo giữa hai tone màu black và beige tạo nên sự
+                đa nhiệm, giúp người mặc trở nên nổi bật hơn và không hề kén màu
+                da.
+              </li>
+              <li>
+                Brandname in nổi bật trước ngực với công nghệ in chuyển nhiệt
+                bền màu, không lo bong tróc, rạn vỡ, thoải mái giặt máy.
+              </li>
+              <li>Cổ áo, tay áo bo thun dệt gân mềm mại, giữ ấm tốt.</li>
+              <div id="example">
+
+                <main>
+                  <button>1</button>
+                  <button>2</button>
+                  <button>3</button>
+                </main>
+                <form id="frm1" action="/action_page.php" name="demo">
+                  First name: <input type="text" name="fname" value="Donald"><br>
+                  Last name: <input type="text" name="lname" value="Duck"><br><br>
+                  <input type="submit" value="Submit">
+                </form> 
+                
+                <p>These are the values of each element in the form:</p>
+                
+                <p id="demo"></p>
+                
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
